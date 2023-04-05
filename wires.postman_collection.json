@@ -1,0 +1,567 @@
+{
+	"info": {
+		"_postman_id": "1ef507eb-25fb-4c3d-8d89-15f4a70aa283",
+		"name": "wires",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/wires/auth/singup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "jkorot100",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "jkorot12345",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "korot100@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "fullname",
+							"value": "Juan Camilo Toro",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/auth/singup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"auth",
+						"singup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/auth/singin (unsuccessful)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "jkorot2034",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "jkorot12",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "korot19204@gmail.com",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "fullname",
+							"value": "Juan Camilo Toro",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/auth/singin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"auth",
+						"singin"
+					]
+				},
+				"description": "Success singup"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/auth/singin (success)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "jkorot34",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "jkorot12345",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "korot1934@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "fullname",
+							"value": "Juan Camilo Toro",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/auth/singup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"auth",
+						"singup"
+					]
+				},
+				"description": "success singup"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/messages (create))",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imprb3JvdCIsInN1YiI6IjFlZmFlM2YyLTliZGEtNDI1MS1hMDUyLTQxMjI3NDg2OThiMSIsImlhdCI6MTY4MDY5NjI0MSwiZXhwIjoxNjgwNzgyNjQxfQ.Uc3DZeyUJAJCA28aBTAIHFARvvsK3j8IfaT59SX9sx0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "mensaje 4",
+							"type": "default"
+						},
+						{
+							"key": "text",
+							"value": "mensaje nuevo 4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/messages (all)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imprb3JvdDEiLCJzdWIiOiJmODk4ZGJjNy1jNDhlLTRjZTQtYWYxYy04MzA2OTljYTgwMTIiLCJpYXQiOjE2ODA2NzI1NTIsImV4cCI6MTY4MDc1ODk1Mn0.2hxTC_1upK4oSGG3cW82QIuMZYd9brq1zqnuCa0cHMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/messages (byId)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imprb3JvdDEiLCJzdWIiOiJmODk4ZGJjNy1jNDhlLTRjZTQtYWYxYy04MzA2OTljYTgwMTIiLCJpYXQiOjE2ODA2NzI1NTIsImV4cCI6MTY4MDc1ODk1Mn0.2hxTC_1upK4oSGG3cW82QIuMZYd9brq1zqnuCa0cHMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/messages/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"messages",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/messages (MyMessages)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imprb3JvdDEiLCJzdWIiOiJmODk4ZGJjNy1jNDhlLTRjZTQtYWYxYy04MzA2OTljYTgwMTIiLCJpYXQiOjE2ODA2NzI1NTIsImV4cCI6MTY4MDc1ODk1Mn0.2hxTC_1upK4oSGG3cW82QIuMZYd9brq1zqnuCa0cHMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/messages/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"messages",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/messages (delete)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imprb3JvdDEiLCJzdWIiOiJmODk4ZGJjNy1jNDhlLTRjZTQtYWYxYy04MzA2OTljYTgwMTIiLCJpYXQiOjE2ODA2NzI1NTIsImV4cCI6MTY4MDc1ODk1Mn0.2hxTC_1upK4oSGG3cW82QIuMZYd9brq1zqnuCa0cHMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/messages/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"messages",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/messages (delete unsuccesful)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imprb3JvdDEiLCJzdWIiOiJmODk4ZGJjNy1jNDhlLTRjZTQtYWYxYy04MzA2OTljYTgwMTIiLCJpYXQiOjE2ODA2NzI1NTIsImV4cCI6MTY4MDc1ODk1Mn0.2hxTC_1upK4oSGG3cW82QIuMZYd9brq1zqnuCa0cHMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/messages/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"messages",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/messages/reaction/9",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imprb3JvdDM0Iiwic3ViIjoiYWZjMTQ0ODQtMGQwZi00NmIwLTliNDgtNGNlNGYxYzQ0ODQ1IiwiaWF0IjoxNjgwNzA1OTM2LCJleHAiOjE2ODA3OTIzMzZ9.wL5sX9vuZlfycw6fa5pqpCP8_Nq02_rdRlz4FLQNWdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "reaction",
+							"value": "😀",
+							"type": "default"
+						},
+						{
+							"key": "author",
+							"value": "d60c9e42-a7f5-40c1-96ee-42ec18b17c74",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/messages/reaction/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"messages",
+						"reaction",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/messages/comment/9",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imprb3JvdCIsInN1YiI6IjFlZmFlM2YyLTliZGEtNDI1MS1hMDUyLTQxMjI3NDg2OThiMSIsImlhdCI6MTY4MDY5NjI0MSwiZXhwIjoxNjgwNzgyNjQxfQ.Uc3DZeyUJAJCA28aBTAIHFARvvsK3j8IfaT59SX9sx0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "comment",
+							"value": "this is a comment",
+							"type": "default"
+						},
+						{
+							"key": "author",
+							"value": "d60c9e42-a7f5-40c1-96ee-42ec18b17c74",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/messages/comment/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"messages",
+						"comment",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/messages/reaction/9 (unsuccessful)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imprb3JvdDM0Iiwic3ViIjoiYWZjMTQ0ODQtMGQwZi00NmIwLTliNDgtNGNlNGYxYzQ0ODQ1IiwiaWF0IjoxNjgwNzA1OTM2LCJleHAiOjE2ODA3OTIzMzZ9.wL5sX9vuZlfycw6fa5pqpCP8_Nq02_rdRlz4FLQNWdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "reaction",
+							"value": "😀",
+							"type": "default"
+						},
+						{
+							"key": "author",
+							"value": "1efae3f2-9bda-4251-a052-4122748698b1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/messages/reaction/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"messages",
+						"reaction",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/wires/messages/comment/9 (unsuccessful)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imprb3JvdCIsInN1YiI6IjFlZmFlM2YyLTliZGEtNDI1MS1hMDUyLTQxMjI3NDg2OThiMSIsImlhdCI6MTY4MDY5NjI0MSwiZXhwIjoxNjgwNzgyNjQxfQ.Uc3DZeyUJAJCA28aBTAIHFARvvsK3j8IfaT59SX9sx0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "comment",
+							"value": "this is a comment",
+							"type": "default"
+						},
+						{
+							"key": "author",
+							"value": "1efae3f2-9bda-4251-a052-4122748698b1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/wires/messages/comment/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"wires",
+						"messages",
+						"comment",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
