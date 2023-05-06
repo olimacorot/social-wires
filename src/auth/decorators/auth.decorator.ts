@@ -1,8 +1,4 @@
-import {
-  createParamDecorator,
-  ExecutionContext,
-  SetMetadata,
-} from '@nestjs/common';
+import { createParamDecorator, ExecutionContext } from '@nestjs/common';
 
 export const User = createParamDecorator(
   (data: unknown, ctx: ExecutionContext) => {
@@ -10,5 +6,3 @@ export const User = createParamDecorator(
     return request.user;
   },
 );
-
-export const Public = () => SetMetadata(process.env.IS_PUBLIC_KEY, true);

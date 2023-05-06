@@ -37,10 +37,9 @@ export class AuthService {
     }
 
     const payload = { username: user.username, sub: user.id };
-
     return {
       access_token: await this.jwtService.signAsync(payload),
-      expires_in: process.env.JWT_EXPIRED,
+      expires_in: '1d',
       message: 'Successfully logged in',
       status: true,
     };
