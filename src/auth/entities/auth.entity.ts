@@ -1,18 +1,18 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-class AuthEntity {
+export class AuthEntity {
   constructor(obj: Partial<AuthEntity>) {
     Object.assign(this, obj);
-  } 
+  }
 
-  @PrimaryGeneratedColumn("uuid")
+  @PrimaryGeneratedColumn('uuid')
   public id: string;
 
-  @Column({unique: true})
+  @Column({ unique: true })
   public username: string;
 
-  @Column({unique: true})
+  @Column({ unique: true })
   public email: string;
 
   @Column()
@@ -21,8 +21,6 @@ class AuthEntity {
   @Column()
   public fullname: string;
 
-  @Column({ type: "timestamptz", default: () => "CURRENT_TIMESTAMP" })
+  @Column({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
   created_at: Date;
 }
-
-export default AuthEntity;

@@ -1,20 +1,21 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Messages } from '../interfaces/messages.interface';
 
 @Entity()
-class MessagesEntity {
+class MessagesEntity implements Messages {
   constructor(obj: Partial<MessagesEntity>) {
     Object.assign(this, obj);
-  } 
+  }
 
   @PrimaryGeneratedColumn()
   public id: number;
-  
+
   @Column()
   public user: string;
-  
+
   @Column()
   public title: string;
-  
+
   @Column()
   public text: string;
 
@@ -24,7 +25,7 @@ class MessagesEntity {
     default: () => "'[]'",
     nullable: false,
   })
-  public reactions!: Array<{ reaction: string, author: string }>;
+  public reactions!: Array<{ reaction: string; author: string }>;
 
   @Column({
     type: 'jsonb',
@@ -32,9 +33,9 @@ class MessagesEntity {
     default: () => "'[]'",
     nullable: false,
   })
-  public comments!: Array<{ comment: string, author: string }>;
+  public comments!: Array<{ comment: string; author: string }>;
 
-  @Column({ type: "timestamptz", default: () => "CURRENT_TIMESTAMP" })
+  @Column({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
   created_at: Date;
 }
 

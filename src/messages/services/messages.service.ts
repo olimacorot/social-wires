@@ -3,6 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import MessagesEntity from '../entities/messages.entity';
 import { Repository } from 'typeorm';
 import { CreateMessageDto } from '../dto/singin.dto/create_message.dto';
+import { Messages } from '../interfaces/messages.interface';
 
 @Injectable()
 export class MessagesService {
@@ -12,7 +13,7 @@ export class MessagesService {
   ) {}
 
   async getAll() {
-    const messages = await this.messagesRepository.find();
+    const messages: Messages[] = await this.messagesRepository.find();
     return messages;
   }
 
@@ -20,13 +21,12 @@ export class MessagesService {
     const message = await this.messagesRepository.find({
       where: {
         user: user,
-      }
+      },
     });
 
     if (!message) {
       throw new NotFoundException('Could not find the message');
     }
-    
     return message;
   }
 
@@ -34,13 +34,13 @@ export class MessagesService {
     const message = await this.messagesRepository.findOne({
       where: {
         id: id,
-      }
+      },
     });
 
     if (!message) {
       throw new NotFoundException('Could not find the message');
     }
-    
+
     return message;
   }
 
@@ -49,7 +49,7 @@ export class MessagesService {
 
     try {
       message = new MessagesEntity(createMessageDto);
-      message.user = user["sub"];
+      message.user = user['sub'];
       await this.messagesRepository.save(message);
     } catch (error) {
       throw error;
@@ -67,7 +67,6 @@ export class MessagesService {
     if (message.affected <= 0) {
       throw new NotFoundException('Could not find the message');
     }
-    
-    return { delete : true, status : "OK" }
+    return { delete: true, status: 'OK' };
   }
 }

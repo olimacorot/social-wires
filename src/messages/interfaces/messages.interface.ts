@@ -1,7 +1,9 @@
 export interface Messages {
   id?: number;
-  username: string;
-  email: string;
-  password: string;
-  fullname: string;
+  user: string;
+  title: string;
+  text: string;
+  reactions: Array<{ reaction: string; author: string }>;
+  comments: Array<{ comment: string; author: string }>;
+  created_at: Date;
 }

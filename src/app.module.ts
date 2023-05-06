@@ -20,7 +20,7 @@ import { MessagesModule } from './messages/messages.module';
     }),
     DatabaseModule,
     AuthModule,
-    MessagesModule
+    MessagesModule,
   ],
   controllers: [],
   providers: [
